@@ -15,31 +15,24 @@ public class DetectarClienteYGenerarReceta : MonoBehaviour
 
     void Start()
     {
+
+        dispositivoDerecho = InputDevices.GetDeviceAtXRNode(manoDerecha);
+
         if (!InputDevices.GetDeviceAtXRNode(manoDerecha).isValid)
         {
             Debug.LogWarning("No se encontró el dispositivo del controlador derecho.");
         }
-        dispositivoDerecho = InputDevices.GetDeviceAtXRNode(manoDerecha);
+        
 
-        //StartCoroutine(EsperarYDetectarDispositivo());
     }
-    //IEnumerator EsperarYDetectarDispositivo()
-    //{
-    //    yield return new WaitForSeconds(1f); // Espera a que XR se inicie
-
-    //    dispositivoDerecho = InputDevices.GetDeviceAtXRNode(manoDerecha);
-    //    if (!dispositivoDerecho.isValid)
-    //    {
-    //        Debug.LogWarning("Dispositivo aún no válido. Intentando más tarde...");
-    //    }
-    //}
+    
 
     void Update()
     {
         Debug.DrawRay(transform.position, transform.forward * distanciaMaxRaycast, Color.red);
 
         // Detectar si se pulsa el gatillo del controlador derecho
-        if (dispositivoDerecho.TryGetFeatureValue(CommonUsages.triggerButton, out bool presionado))
+        if (dispositivoDerecho.TryGetFeatureValue(CommonUsages.gripButton, out bool presionado))
         {
             if (presionado && !gatilloPresionado)
             {
@@ -51,26 +44,6 @@ public class DetectarClienteYGenerarReceta : MonoBehaviour
                 gatilloPresionado = false;
             }
         }
-
-        //if (!dispositivoDerecho.isValid)
-        //{
-        //    dispositivoDerecho = InputDevices.GetDeviceAtXRNode(manoDerecha);
-        //    return;
-        //}
-
-        //if (dispositivoDerecho.TryGetFeatureValue(CommonUsages.triggerButton, out bool presionado))
-        //{
-        //    if (presionado && !gatilloPresionado)
-        //    {
-        //        Debug.Log("Gatillo presionado");
-        //        gatilloPresionado = true;
-        //        RaycastYDetectarCliente();
-        //    }
-        //    else if (!presionado)
-        //    {
-        //        gatilloPresionado = false;
-        //    }
-        //}
 
     }
 
