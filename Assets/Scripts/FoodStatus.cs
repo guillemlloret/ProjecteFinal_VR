@@ -17,7 +17,7 @@ public class FoodStatus : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (isOnMachine)
         {
@@ -30,8 +30,8 @@ public class FoodStatus : MonoBehaviour
 
         if (isCompleted)
         {
-            tarrina.transform.position = null;
-           
+            tarrina.transform.position = new Vector3(tarrina.transform.position.x, tarrina.transform.position.y, tarrina.transform.position.z);
+
         }
 
     }
