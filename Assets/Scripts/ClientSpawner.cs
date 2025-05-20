@@ -8,7 +8,7 @@ public class ClientSpawner : MonoBehaviour
     public Transform[] spawnPoints;
     public Transform[] waypoints;
 
-    public float spawnInterval = 5f;
+    public float spawnInterval = 30f;
 
     void Start()
     {
