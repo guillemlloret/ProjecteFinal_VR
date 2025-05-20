@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class ClientSpawner : MonoBehaviour
 {
-    public GameObject clientPrefab;
+    public GameObject [] clientPrefab;
     public Transform[] spawnPoints;
-
-    public Transform[] waypoints; // Añade esta línea para asignar los waypoints de la escena
+    public Transform[] waypoints;
 
     public float spawnInterval = 5f;
-    public float spawnIntervalRandomOffset = 10f;
 
     void Start()
     {
@@ -22,18 +20,17 @@ public class ClientSpawner : MonoBehaviour
         while (true)
         {
             SpawnClient();
-            float randomOffset = Random.Range(-spawnIntervalRandomOffset, spawnIntervalRandomOffset);
-            yield return new WaitForSeconds(spawnInterval + randomOffset);
+            yield return new WaitForSeconds(spawnInterval); // Tiempo fijo entre cada cliente
         }
     }
 
     void SpawnClient()
     {
         int index = Random.Range(0, spawnPoints.Length);
+        int index_client = Random.Range(0, clientPrefab.Length);
         Transform spawnPoint = spawnPoints[index];
-        GameObject client = Instantiate(clientPrefab, spawnPoint.position, spawnPoint.rotation);
+        GameObject client = Instantiate(clientPrefab[index_client], spawnPoint.position, spawnPoint.rotation);
 
-        // Aquí pasas los waypoints al script ClientMovement del cliente instanciado
         ClientMovement clientMovement = client.GetComponent<ClientMovement>();
         if (clientMovement != null)
         {
