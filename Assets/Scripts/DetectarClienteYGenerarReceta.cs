@@ -8,7 +8,7 @@ public class DetectarClienteYGenerarReceta : MonoBehaviour
 {
     public XRNode manoDerecha = XRNode.RightHand; // El controlador derecho
     public float distanciaMaxRaycast = 5f;
-    public LayerMask layerClientes; // Asegúrate de asignar una capa a los "clientes"
+    public LayerMask layerClientes; 
 
     private InputDevice dispositivoDerecho;
     private bool gatilloPresionado = false;
@@ -44,6 +44,8 @@ public class DetectarClienteYGenerarReceta : MonoBehaviour
                 gatilloPresionado = false;
             }
         }
+
+        RaycastYDetectarCliente();
 
     }
 
