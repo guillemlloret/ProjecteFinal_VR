@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 72976504}
   - component: {fileID: 72976507}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Play_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -596,7 +596,7 @@ GameObject:
   - component: {fileID: 1193893727}
   - component: {fileID: 1193893726}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1054,7 +1054,7 @@ GameObject:
   - component: {fileID: 1358620133}
   - component: {fileID: 1358620132}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Game_Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1076,7 +1076,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 29.6}
+  m_AnchoredPosition: {x: 0, y: 19.7}
   m_SizeDelta: {x: 200, y: 41.0261}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1358620132
@@ -1101,8 +1101,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Ice Frio Hielo's
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1cd139496a8f324488252a410cbee4da, type: 2}
+  m_sharedMaterial: {fileID: -2478057953724947541, guid: 1cd139496a8f324488252a410cbee4da, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
