@@ -5,11 +5,15 @@ using UnityEngine;
 public class MaquinaGelats : MonoBehaviour
 {
     private bool téMaduixa = false;
+    private bool téLlimona = false;
     private bool téGel = false;
+
     public GameObject poloMaduixaPrefab;
+    public GameObject poloLlimonaPrefab;
     public GameObject poloSpawn;
 
     private GameObject maduixaObjecte;
+    private GameObject llimonaObjecte;
     private GameObject gelObjecte;
 
     // Quan un ingredient entra en el collider de la màquina
@@ -31,6 +35,12 @@ public class MaquinaGelats : MonoBehaviour
             gelObjecte = other.gameObject;
             Debug.Log("Gel detectat");
         }
+        else if (other.gameObject.tag == "Llimona")
+        {
+            téLlimona = true;
+            llimonaObjecte = other.gameObject;
+            Debug.Log("Limona detectada");
+        }
         ComprovarCombinacio();
 
     }
@@ -51,6 +61,11 @@ public class MaquinaGelats : MonoBehaviour
             téGel = false;
             Debug.Log("Gel eliminat");
         }
+        else if (other.gameObject.tag == "Llimona")
+        {
+            téLlimona = false;
+            Debug.Log("Llimona eliminada");
+        }
 
     }
 
@@ -58,11 +73,15 @@ public class MaquinaGelats : MonoBehaviour
     {
         if (téMaduixa && téGel)
         {
-            CrearPolo();
+            CrearPoloMaduixa();
+        }
+        if (téLlimona && téGel)
+        {
+            CrearPoloLlimona();
         }
     }
 
-    void CrearPolo()
+    void CrearPoloMaduixa()
     {
         if (poloMaduixaPrefab != null)
         {
@@ -88,6 +107,35 @@ public class MaquinaGelats : MonoBehaviour
         }
 
         téMaduixa = false;
+        téGel = false;
+    }
+
+    void CrearPoloLlimona()
+    {
+        if (poloLlimonaPrefab != null)
+        {
+            Instantiate(poloLlimonaPrefab, poloSpawn.transform.position, Quaternion.identity);
+
+            Debug.Log("Has creat un polo de llimona!");
+
+            if (llimonaObjecte != null)
+            {
+                Destroy(llimonaObjecte);
+                Debug.Log("Llimona destruïda");
+            }
+
+            if (gelObjecte != null)
+            {
+                Destroy(gelObjecte);
+                Debug.Log("Gel destruït");
+            }
+        }
+        else
+        {
+            Debug.LogError("El prefab del polo de llimona no està assignat!");
+        }
+
+        téLlimona = false;
         téGel = false;
     }
 }
