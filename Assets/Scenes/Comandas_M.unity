@@ -4295,7 +4295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manoDerecha: 5
-  distanciaMaxRaycast: 7
+  distanciaMaxRaycast: 5
   layerClientes:
     serializedVersion: 2
     m_Bits: 64
