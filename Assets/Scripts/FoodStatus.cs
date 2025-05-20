@@ -17,9 +17,9 @@ public class FoodStatus : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if (isOnMachine)
+        if (isOnMachine && !isCompleted)
         {
             tarrina.transform.position = dispensador.transform.position;
             if (tarrina.transform.position == dispensador.transform.position)
@@ -28,11 +28,12 @@ public class FoodStatus : MonoBehaviour
             }
         }
 
-        if (isCompleted)
-        {
-            tarrina.transform.position = new Vector3(tarrina.transform.position.x, tarrina.transform.position.y, tarrina.transform.position.z);
+        //if (isCompleted)
+        //{
+            
+        //    tarrina.transform.position = new Vector3(tarrina.transform.position.x, tarrina.transform.position.y, tarrina.transform.position.z);
 
-        }
+        //}
 
     }
 
