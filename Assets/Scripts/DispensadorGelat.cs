@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DispensadorGelat : MonoBehaviour
 {
+    public GameObject dispensador;
+    public GameObject _gelat;
     //public  static FoodStatus  _instance;
     // Start is called before the first frame update
     public void Awake()
@@ -24,5 +26,6 @@ public class DispensadorGelat : MonoBehaviour
 
         FoodStatus _statusFood = gelat.GetComponent<FoodStatus>();
         _statusFood.isCompleted = true;
+        
     }
 }

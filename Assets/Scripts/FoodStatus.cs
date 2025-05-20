@@ -5,6 +5,8 @@ using UnityEngine;
 public class FoodStatus : MonoBehaviour
 {
     public bool isCompleted;
+    public GameObject dispensador;
+    public GameObject tarrina;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +17,10 @@ public class FoodStatus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isCompleted)
+        {
+            tarrina.transform.position = dispensador.transform.position;
+        }
         
     }
 
