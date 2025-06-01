@@ -2559,7 +2559,7 @@ GameObject:
   - component: {fileID: 352867324}
   - component: {fileID: 352867323}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: techo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5252,6 +5252,10 @@ MonoBehaviour:
   - {fileID: 1343666538906574326, guid: 827f88cd3ed94194ea6e578b9cbaee20, type: 3}
   - {fileID: 6887803082575525561, guid: f0e5591dbdff91f47bbfde7c78ddf261, type: 3}
   - {fileID: 8490224901189213027, guid: 7b2f40f82b8e0f349b69f6efaf0d93a7, type: 3}
+  - {fileID: 3994237922628278534, guid: 2e5f78b6d5f35664ea05312492d621e5, type: 3}
+  - {fileID: 7646633247831020037, guid: 4d1e91d0a9c876f449d657dce47ed4ed, type: 3}
+  - {fileID: 4660706188774774636, guid: 900b30d96de10304ca8a28cca962371b, type: 3}
+  - {fileID: 8373500218153294013, guid: f7ab9ad8f95487945a15050c0a6fabf6, type: 3}
   spawnPoints:
   - {fileID: 476326430}
   - {fileID: 2059403887}

@@ -124,6 +124,8 @@ MonoBehaviour:
   currentWaypoint: 0
   speed: 2
   spawner: {fileID: 0}
+  orderCompleted: 0
+  target: {fileID: 0}
 --- !u!1001 &7472906640964918912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -134,12 +136,28 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2424534765217235071, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
       propertyPath: m_Name
-      value: ComandaPoloFresa
+      value: "ComandaPoloLim\xF3n"
       objectReference: {fileID: 0}
     - target: {fileID: 2424534765217235071, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3902075984190092252, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0.00000047683716
+      objectReference: {fileID: 0}
+    - target: {fileID: 3902075984190092252, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6397711658987143501, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6397711658987143501, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3dd46b2c6dce50e4d9817edae0233fa6, type: 3}
     - target: {fileID: 6919868886420690939, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -182,7 +200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6919868886420690939, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.73
+      value: -0.613
       objectReference: {fileID: 0}
     - target: {fileID: 6919868886420690939, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
       propertyPath: m_LocalRotation.w
@@ -202,11 +220,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6919868886420690939, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.1
+      value: 0.004
       objectReference: {fileID: 0}
     - target: {fileID: 6919868886420690939, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.74
+      value: 1.23
       objectReference: {fileID: 0}
     - target: {fileID: 6919868886420690939, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -221,7 +239,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2982792945333749034, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}

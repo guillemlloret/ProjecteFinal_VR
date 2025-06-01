@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8490224901189213027
+--- !u!1 &8373500218153294013
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9223362326448872590}
-  - component: {fileID: 8195476130624599881}
-  - component: {fileID: 816435415077495463}
-  - component: {fileID: 2441573668322719002}
-  - component: {fileID: -7126408989976931329}
-  m_Layer: 6
-  m_Name: Client_3
-  m_TagString: Polo_llimona
+  - component: {fileID: 1617975675461992007}
+  - component: {fileID: 4501182594343708155}
+  - component: {fileID: 1325953070807002887}
+  - component: {fileID: 7743273115492379063}
+  m_Layer: 0
+  m_Name: Client_7
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9223362326448872590
+--- !u!4 &1617975675461992007
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8490224901189213027}
+  m_GameObject: {fileID: 8373500218153294013}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.5838332, y: 1, z: 10.785956}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6348080933606722696}
+  - {fileID: 1956722251119677479}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8195476130624599881
+--- !u!33 &4501182594343708155
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8490224901189213027}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &816435415077495463
+  m_GameObject: {fileID: 8373500218153294013}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1325953070807002887
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8490224901189213027}
+  m_GameObject: {fileID: 8373500218153294013}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -86,13 +85,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2441573668322719002
-SphereCollider:
+--- !u!136 &7743273115492379063
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8490224901189213027}
+  m_GameObject: {fileID: 8373500218153294013}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -101,40 +100,25 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 2
   m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-7126408989976931329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8490224901189213027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7f7d3ef8df44db4cb7456c2fc22850a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentWaypoint: 0
-  speed: 2
-  spawner: {fileID: 0}
-  orderCompleted: 0
-  target: {fileID: 0}
---- !u!1001 &4039933303752301427
+--- !u!1001 &8876591103113250780
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 9223362326448872590}
+    m_TransformParent: {fileID: 1617975675461992007}
     m_Modifications:
     - target: {fileID: 2424534765217235071, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
       propertyPath: m_Name
-      value: ComandaPoloLlimona
+      value: ComandaHeladoIogurt
       objectReference: {fileID: 0}
     - target: {fileID: 2424534765217235071, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
       propertyPath: m_IsActive
@@ -151,7 +135,7 @@ PrefabInstance:
     - target: {fileID: 6397711658987143501, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6f7733e1b85431f4eaf3777979fffe58, type: 3}
+      objectReference: {fileID: 21300000, guid: ed1df96d118be5340b32941a443fb71f, type: 3}
     - target: {fileID: 6919868886420690939, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -194,7 +178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6919868886420690939, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.404
+      value: -0.541
       objectReference: {fileID: 0}
     - target: {fileID: 6919868886420690939, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
       propertyPath: m_LocalRotation.w
@@ -218,7 +202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6919868886420690939, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.839
+      value: 1.188
       objectReference: {fileID: 0}
     - target: {fileID: 6919868886420690939, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -238,8 +222,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
---- !u!224 &6348080933606722696 stripped
+--- !u!224 &1956722251119677479 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6919868886420690939, guid: 3c96b0db5d1ac074a9f865c01e1bc342, type: 3}
-  m_PrefabInstance: {fileID: 4039933303752301427}
+  m_PrefabInstance: {fileID: 8876591103113250780}
   m_PrefabAsset: {fileID: 0}
