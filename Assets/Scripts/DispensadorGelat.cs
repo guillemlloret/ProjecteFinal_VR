@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DispensadorGelat : MonoBehaviour
 {
-   
+    FoodStatus _statusFood;
     //public  static FoodStatus  _instance;
     // Start is called before the first frame update
     public void Awake()
@@ -20,7 +20,7 @@ public class DispensadorGelat : MonoBehaviour
 
     public void OnTriggerEnter(Collider gelat)
     {
-        FoodStatus _statusFood = gelat.GetComponent<FoodStatus>();
+        _statusFood = gelat.GetComponent<FoodStatus>();
         if (_statusFood != null)
         {
             _statusFood.isOnMachine = true;
@@ -32,11 +32,9 @@ public class DispensadorGelat : MonoBehaviour
     }
 
 
-    //public void OnTriggerEnter(Collider gelat)
-    //{
+    void CompleteOrder()
+    {
+        _statusFood.isCompleted = true;
 
-    //    FoodStatus _statusFood = gelat.GetComponent<FoodStatus>();
-    //    _statusFood.isOnMachine = true;
-
-    //}
+    }
 }
