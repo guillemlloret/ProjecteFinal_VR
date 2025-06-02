@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3679280269399294108}
   - component: {fileID: 1409094636251312177}
   - component: {fileID: 355270437264173672}
+  - component: {fileID: 7954558477810486805}
   m_Layer: 6
   m_Name: Client_2
   m_TagString: Polo_maduixa
@@ -126,6 +127,33 @@ MonoBehaviour:
   spawner: {fileID: 0}
   orderCompleted: 0
   target: {fileID: 0}
+--- !u!54 &7954558477810486805
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6887803082575525561}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1001 &7472906640964918912
 PrefabInstance:
   m_ObjectHideFlags: 0
