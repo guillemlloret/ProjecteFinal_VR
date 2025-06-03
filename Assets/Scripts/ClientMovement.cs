@@ -138,6 +138,7 @@ public class ClientMovement : MonoBehaviour
             {
                 timerStarted = false;
                 isLeaving = true;
+                points.Points -= 50;
 
                 if (countdownSlider != null)
                 {
