@@ -2711,6 +2711,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195372450}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &204040925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 204040926}
+  m_Layer: 0
+  m_Name: '------------   '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &204040926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204040925}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.032959, y: 0.8178337, z: -1.6054424}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &205102791
 GameObject:
   m_ObjectHideFlags: 0
@@ -3384,6 +3415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameTime: 120
   timeTextBox: {fileID: 146309131}
+  CompletedDay: {fileID: 0}
 --- !u!4 &311846077
 Transform:
   m_ObjectHideFlags: 0
@@ -7835,13 +7867,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clientPrefab:
-  - {fileID: 1343666538906574326, guid: 827f88cd3ed94194ea6e578b9cbaee20, type: 3}
-  - {fileID: 6887803082575525561, guid: f0e5591dbdff91f47bbfde7c78ddf261, type: 3}
-  - {fileID: 8490224901189213027, guid: 7b2f40f82b8e0f349b69f6efaf0d93a7, type: 3}
-  - {fileID: 3994237922628278534, guid: 2e5f78b6d5f35664ea05312492d621e5, type: 3}
-  - {fileID: 7646633247831020037, guid: 4d1e91d0a9c876f449d657dce47ed4ed, type: 3}
-  - {fileID: 4660706188774774636, guid: 900b30d96de10304ca8a28cca962371b, type: 3}
-  - {fileID: 8373500218153294013, guid: f7ab9ad8f95487945a15050c0a6fabf6, type: 3}
+  - {fileID: 6308502513108885181, guid: 186f95a81e13c384cb2253d5404a26ed, type: 3}
+  - {fileID: 984170348115131585, guid: f0e5591dbdff91f47bbfde7c78ddf261, type: 3}
+  - {fileID: 4722580458802694256, guid: 7b2f40f82b8e0f349b69f6efaf0d93a7, type: 3}
+  - {fileID: 6813885746647520873, guid: 2e5f78b6d5f35664ea05312492d621e5, type: 3}
+  - {fileID: 2600620271949963754, guid: 4d1e91d0a9c876f449d657dce47ed4ed, type: 3}
+  - {fileID: 5981986996389630308, guid: 900b30d96de10304ca8a28cca962371b, type: 3}
+  - {fileID: 8015043586881728034, guid: f7ab9ad8f95487945a15050c0a6fabf6, type: 3}
   spawnPoints:
   - {fileID: 476326430}
   - {fileID: 2059403887}
@@ -23989,6 +24021,7 @@ SceneRoots:
   - {fileID: 141409274}
   - {fileID: 311846077}
   - {fileID: 1745248130}
+  - {fileID: 204040926}
   - {fileID: 7457582670408479470}
   - {fileID: 223369462514849266}
   - {fileID: 402446912}
