@@ -16,68 +16,68 @@ public class MaquinaGelats : MonoBehaviour
     private GameObject llimonaObjecte;
     private GameObject gelObjecte;
 
-    // Quan un ingredient entra en el collider de la màquina
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Un objecte ha entrat al collider: " + other.gameObject.tag);
 
-
-
-        if (other.gameObject.tag == "Maduixa")
+        if (other.CompareTag("Maduixa"))
         {
             téMaduixa = true;
             maduixaObjecte = other.gameObject;
             Debug.Log("Maduixa detectada");
         }
-        else if (other.gameObject.tag == "Gel")
+        else if (other.CompareTag("Gel"))
         {
             téGel = true;
             gelObjecte = other.gameObject;
             Debug.Log("Gel detectat");
         }
-        else if (other.gameObject.tag == "Llimona")
+        else if (other.CompareTag("Llimona"))
         {
             téLlimona = true;
             llimonaObjecte = other.gameObject;
-            Debug.Log("Limona detectada");
+            Debug.Log("Llimona detectada");
         }
-        ComprovarCombinacio();
-
     }
 
     private void OnTriggerExit(Collider other)
     {
         Debug.Log("Un objecte ha sortit del collider: " + other.gameObject.tag);
 
-
-
-        if (other.gameObject.tag == "Maduixa")
+        if (other.CompareTag("Maduixa"))
         {
             téMaduixa = false;
+            maduixaObjecte = null;
             Debug.Log("Maduixa eliminada");
         }
-        else if (other.gameObject.tag == "Gel")
+        else if (other.CompareTag("Gel"))
         {
             téGel = false;
+            gelObjecte = null;
             Debug.Log("Gel eliminat");
         }
-        else if (other.gameObject.tag == "Llimona")
+        else if (other.CompareTag("Llimona"))
         {
             téLlimona = false;
+            llimonaObjecte = null;
             Debug.Log("Llimona eliminada");
         }
-
     }
 
-    void ComprovarCombinacio()
+    // Aquesta funció es crida des de la palanca
+    public void ActivarMaquina()
     {
         if (téMaduixa && téGel)
         {
             CrearPoloMaduixa();
         }
-        if (téLlimona && téGel)
+        else if (téLlimona && téGel)
         {
             CrearPoloLlimona();
+        }
+        else
+        {
+            Debug.Log("No hi ha una combinació vàlida per fer un polo.");
         }
     }
 
@@ -86,24 +86,12 @@ public class MaquinaGelats : MonoBehaviour
         if (poloMaduixaPrefab != null)
         {
             Instantiate(poloMaduixaPrefab, poloSpawn.transform.position, Quaternion.identity);
-           
             Debug.Log("Has creat un polo de maduixa!");
 
             if (maduixaObjecte != null)
-            {
                 Destroy(maduixaObjecte);
-                Debug.Log("Maduixa destruïda");
-            }
-
             if (gelObjecte != null)
-            {
                 Destroy(gelObjecte);
-                Debug.Log("Gel destruït");
-            }
-        }
-        else
-        {
-            Debug.LogError("El prefab del polo de maduixa no està assignat!");
         }
 
         téMaduixa = false;
@@ -115,29 +103,15 @@ public class MaquinaGelats : MonoBehaviour
         if (poloLlimonaPrefab != null)
         {
             Instantiate(poloLlimonaPrefab, poloSpawn.transform.position, Quaternion.identity);
-
             Debug.Log("Has creat un polo de llimona!");
 
             if (llimonaObjecte != null)
-            {
                 Destroy(llimonaObjecte);
-                Debug.Log("Llimona destruïda");
-            }
-
             if (gelObjecte != null)
-            {
                 Destroy(gelObjecte);
-                Debug.Log("Gel destruït");
-            }
-        }
-        else
-        {
-            Debug.LogError("El prefab del polo de llimona no està assignat!");
         }
 
         téLlimona = false;
         téGel = false;
     }
 }
-
-

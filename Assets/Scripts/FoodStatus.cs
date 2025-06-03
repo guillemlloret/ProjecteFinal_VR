@@ -8,7 +8,7 @@ public class FoodStatus : MonoBehaviour
     public bool isCompleted;
     public GameObject dispensador;
     public GameObject tarrina;
-    public Animator _tarrinaAnimator;
+    public Animator portaTarrinaAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class FoodStatus : MonoBehaviour
             tarrina.transform.position = dispensador.transform.position;
             if (tarrina.transform.position == dispensador.transform.position)
             {
-                _tarrinaAnimator.SetBool("Fall2", true);
+                portaTarrinaAnimator.SetBool("tancarPorta", true);
             }
         }
 
@@ -39,7 +39,9 @@ public class FoodStatus : MonoBehaviour
 
     public void CompleteOrder()
     {
-        isCompleted=true;
+        portaTarrinaAnimator.SetBool("tancarPorta", false);
+        isCompleted =true;
+
     }
 
 }
