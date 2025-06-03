@@ -287,6 +287,7 @@ GameObject:
   - component: {fileID: 2400458514966043569}
   - component: {fileID: 2056260794178767915}
   - component: {fileID: 6021789103299380624}
+  - component: {fileID: 4574863842588075205}
   m_Layer: 0
   m_Name: Client_3
   m_TagString: Polo_llimona
@@ -353,6 +354,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &4574863842588075205
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4722580458802694256}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.89426494, y: 0.44556838, z: 0.5427141}
+  m_Center: {x: -0.05286753, y: 0.023390085, z: -0.040109634}
 --- !u!1 &5029620033814648367
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,11 +9,16 @@ public class FoodStatus : MonoBehaviour
     public GameObject dispensador;
     public GameObject tarrina;
     public Animator portaTarrinaAnimator;
+    public Mesh _gelatTarrina;
+    public Material materialGelat;
+    public Animator animatorTarrina;
+
 
     // Start is called before the first frame update
     void Start()
     {
         isCompleted = false;
+       
     }
 
     // Update is called once per frame
@@ -27,7 +32,12 @@ public class FoodStatus : MonoBehaviour
                 portaTarrinaAnimator.SetBool("tancarPorta", true);
             }
         }
-
+        if (isCompleted)
+        {
+            animatorTarrina.SetBool("CaureGelat", true);
+                
+            
+        }
         //if (isCompleted)
         //{
             
