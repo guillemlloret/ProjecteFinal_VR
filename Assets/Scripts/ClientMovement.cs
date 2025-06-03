@@ -15,6 +15,8 @@ public class ClientMovement : MonoBehaviour
     public static ClientMovement Instance;
     public Transform target;
 
+    public WalkpointStatus _walkpointStatus;
+
     public void SetWaypoints(Transform[] points)
     {
         waypoints = points;
@@ -23,16 +25,19 @@ public class ClientMovement : MonoBehaviour
     void Awake()
     {
         Instance = this;
+
     }
 
     private void FixedUpdate()
     {
+        //_walkpointStatus = target.GetComponent<WalkpointStatus>();
         //if (waypoints == null || currentWaypoint >= waypoints.Length) return;
-         target = waypoints[0];
+         
         
         if (orderCompleted)
         {
-            
+            target = waypoints[0];
+
             Vector3 direction = (target.position - transform.position).normalized;
             transform.position += direction * speed * Time.deltaTime;
             //if (Vector3.Distance(transform.position, target.position) > 0.1f && orderCompleted)
@@ -46,27 +51,43 @@ public class ClientMovement : MonoBehaviour
                 Destroy(ClientSpawner.Instance.client);
             }
         }
-        
+
+
+        //if (_walkpointStatus.isOccupied)
+        //{
+        //    currentWaypoint++;
+        //}
+
 
 
     }
 
     void Update()
     {
-        if (waypoints == null || currentWaypoint >= waypoints.Length) return;
+            if (waypoints == null || currentWaypoint >= 4) return;
 
+        
         Transform target = waypoints[currentWaypoint];
+        _walkpointStatus = target.GetComponent<WalkpointStatus>();
+
 
         // Movimiento hacia el waypoint
         Vector3 direction = (target.position - transform.position).normalized;
         transform.position += direction * speed * Time.deltaTime;
 
-        if (Vector3.Distance(transform.position, target.position) < 0.1f)
+        while (currentWaypoint < 4)
         {
-            currentWaypoint++;
+            if (Vector3.Distance(transform.position, target.position) < 0.1f && currentWaypoint < 4)
+            {
+                currentWaypoint++;
+            }
+            if (_walkpointStatus.isOccupied)
+            {
+                Debug.Log("Ocupado");
+                MoveForward(currentWaypoint);
+            }
         }
 
-        
 
 
     }
@@ -117,6 +138,14 @@ public class ClientMovement : MonoBehaviour
         {
             currentWaypoint--;
         }
+    }
+
+    void MoveForward(int currentPoint)
+    {
+        Vector3 position = transform.position;
+        position.x = 5;
+        transform.position = position;
+
     }
 
    
