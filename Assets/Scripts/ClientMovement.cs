@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // Para el Slider
-
+using TMPro;
 public class ClientMovement : MonoBehaviour
 {
+   
     private Transform[] waypoints;
     public int currentWaypoint = 0;
     public float speed = 2f;
@@ -23,6 +24,7 @@ public class ClientMovement : MonoBehaviour
 
     [Header("REFERENCIAS DE UI")]
     [SerializeField] private Slider countdownSlider;
+    [SerializeField] PointsHUD points;
 
     public void SetWaypoints(Transform[] points)
     {
@@ -144,18 +146,21 @@ public class ClientMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "tarrina" && ClientSpawner.Instance.client.tag == "tarrina")
         {
+            points.Points += 100;
             Debug.Log("detectat tarrina");
             Destroy(other.gameObject);
             orderCompleted = true;
         }
         else if (other.gameObject.tag == "Polo_maduixa" && ClientSpawner.Instance.client.tag == "Polo_maduixa")
         {
+            points.Points += 100;
             Debug.Log("detectat Polo_maduixa");
             Destroy(other.gameObject);
             orderCompleted = true;
         }
         else if (other.gameObject.tag == "Polo_llimona" && ClientSpawner.Instance.client.tag == "Polo_llimona")
         {
+            points.Points += 100;
             Debug.Log("detectat Polo_llimona");
             Destroy(other.gameObject);
             orderCompleted = true;

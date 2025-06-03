@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Polo_Low
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 088caeeb46e229a4c88e837c83cfa929, type: 3}
+      propertyPath: m_TagString
+      value: Polo_maduixa
+      objectReference: {fileID: 0}
     - target: {fileID: 2671619975614465511, guid: 088caeeb46e229a4c88e837c83cfa929, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

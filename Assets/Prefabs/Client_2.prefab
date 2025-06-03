@@ -175,7 +175,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7396640212397925822}
   - component: {fileID: 8216311283412898958}
-  - component: {fileID: 7912681210854533435}
   - component: {fileID: 1725301743238364078}
   m_Layer: 0
   m_Name: Client_2
@@ -221,33 +220,7 @@ MonoBehaviour:
   timeBeforeExit: 30
   countdownTimer: 0
   countdownSlider: {fileID: 1772734845340059393}
---- !u!54 &7912681210854533435
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984170348115131585}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  points: {fileID: 0}
 --- !u!65 &1725301743238364078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -263,7 +236,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

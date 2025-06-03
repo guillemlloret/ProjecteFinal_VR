@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1089443459683533162}
   m_Layer: 0
   m_Name: PoloFresa
-  m_TagString: Untagged
+  m_TagString: Polo_maduixa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,6 +93,10 @@ PrefabInstance:
     - target: {fileID: 4677504990422157119, guid: 3464f3a9d73e32e4886d0d1ca18cc067, type: 3}
       propertyPath: m_Name
       value: Polo_Low
+      objectReference: {fileID: 0}
+    - target: {fileID: 4677504990422157119, guid: 3464f3a9d73e32e4886d0d1ca18cc067, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5449925839297355141, guid: 3464f3a9d73e32e4886d0d1ca18cc067, type: 3}
       propertyPath: m_LocalScale.x
