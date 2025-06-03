@@ -96,7 +96,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4677504990422157119, guid: 3464f3a9d73e32e4886d0d1ca18cc067, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Polo_maduixa
       objectReference: {fileID: 0}
     - target: {fileID: 5449925839297355141, guid: 3464f3a9d73e32e4886d0d1ca18cc067, type: 3}
       propertyPath: m_LocalScale.x
