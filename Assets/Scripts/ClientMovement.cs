@@ -41,6 +41,7 @@ public class ClientMovement : MonoBehaviour
 
     void Awake()
     {
+       
         Instance = this;
 
         if (countdownSlider != null)
@@ -51,7 +52,10 @@ public class ClientMovement : MonoBehaviour
             countdownSlider.gameObject.SetActive(false);
         }
     }
-
+    private void Start()
+    {
+        points = FindAnyObjectByType<PointsHUD>();
+    }
     private void FixedUpdate()
     {
         if (orderCompleted && !isLeaving)
@@ -78,6 +82,7 @@ public class ClientMovement : MonoBehaviour
 
     void Update()
     {
+     
         if (isLeaving)
         {
             if (waypoints != null && waypoints.Length > 0)
@@ -144,6 +149,7 @@ public class ClientMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("triggerEnter");
         if (other.gameObject.tag == "tarrina" && ClientSpawner.Instance.client.tag == "tarrina")
         {
             points.Points += 100;

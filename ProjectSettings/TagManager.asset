@@ -11,6 +11,7 @@ TagManager:
   - tarrina
   - Polo_maduixa
   - Polo_llimona
+  - pointsHUD
   layers:
   - Default
   - TransparentFX
